@@ -1,0 +1,357 @@
+body {
+    background: linear-gradient(140.54deg, #608D00 0%, #D30000 72.37%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), radial-gradient(100% 164.72% at 100% 100%, #6100FF 0%, #00FF57 100%), radial-gradient(100% 148.07% at 0% 0%, #FFF500 0%, #51D500 100%);
+  background-blend-mode: color-dodge, overlay, difference, normal;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    overflow-x: hidden;
+  }  
+  a {
+    text-decoration: none;
+  }
+  
+  .winter {
+    background-image: url("https://images.unsplash.com/photo-1484603738253-e5b73679e8cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2128&q=80");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .beach {
+    background-image: url("https://images.unsplash.com/photo-1476673160081-cf065607f449?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .jungle {
+    background-image: url("https://images.unsplash.com/photo-1586094332115-680788e0182f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .swamp {
+    background-image: url("https://images.unsplash.com/photo-1601477592675-333fade38e9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .pyramids {
+    background-image: url("https://images.unsplash.com/photo-1570026517541-258404ea3bfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .nav {
+    display: flex;
+    justify-content: center;
+    margin-top: -0.5rem;
+    
+    
+  }
+  
+  .invoice-box {
+    backdrop-filter: blur(16px) saturate(200%);
+      -webkit-backdrop-filter: blur(16px) saturate(200%);
+      background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    max-width: 800px;
+    position: relative;
+    top: 2vh;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .85);
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    color: black;
+    
+  }
+  .invoice-box i {
+      margin-left: -26px;
+      cursor: pointer;
+    padding-right: 5px;
+  }
+  .pass {
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  .invoice-box table {
+    width: 100%;
+    line-height: inherit;
+    text-align: left;
+  }
+  
+  .invoice-box table td {
+    padding: 5px;
+    vertical-align: top;
+  }
+  
+  .invoice-box table tr td:nth-child(n+2) {
+    text-align: right;
+  }
+  
+  .invoice-box table tr.top table td {
+    padding-bottom: 20px;
+  }
+  
+  .invoice-box table tr.top table td.title {
+    font-size: 45px;
+    line-height: 45px;
+    color: #333;
+  }
+  
+  .invoice-box table tr.information table td {
+    padding-bottom: 40px;
+  }
+  
+  .invoice-box table tr.heading td {
+    background: transparent;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+  }
+  
+  .invoice-box table tr.details td {
+    padding-bottom: 20px;
+  }
+  
+  .invoice-box table tr.item td{
+    border-bottom: 1px solid #eee;
+  }
+  
+  .invoice-box table tr.item.last td {
+    border-bottom: none;
+  }
+  
+  .invoice-box table tr.item input {
+    padding-left: 5px;
+  }
+  
+  .invoice-box table tr.item td:first-child input {
+    margin-left: -5px;
+    width: 100%;
+  }
+  
+  .invoice-box table tr.totalwithtax td:nth-child(2) {
+    border-top: 2px solid #eee;
+    font-weight: bold;
+  }
+  
+  .invoice-box input[type=number] {
+    width: 60px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .invoice-box table tr.top table td {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    
+    .invoice-box table tr.information table td {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+  }
+  
+  /** RTL **/
+  .rtl {
+    direction: rtl;
+    font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+  }
+  
+  .rtl table {
+    text-align: right;
+  }
+  
+  .rtl table tr td:nth-child(2) {
+    text-align: left;
+  }
+  /*my formatting additions*/
+  img {
+    border: solid blue 2px;
+    background: gray;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .55);
+  }
+  .date, .info {
+    text-align: left;
+    
+    font-size: 1rem;
+  }
+  .work {
+    resize: none;
+    margin-top: 25px;
+    border: none;
+    box-sizing: border-box;
+  
+      width: 100%;
+  }
+  #one {
+    
+    text-align: right;
+  }
+  
+  
+  .btn-add-row:hover {
+    background: #7afaa1;
+    transition: 0.5s;
+  }
+  .btn-delete-row:hover {
+    background: #fc7474;
+    transition: 0.5s;
+  }
+  #btn-top, #theme-button, button, #btn1 {
+    
+    background-color: #fff;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.5rem 1.6rem;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  #btn-top:hover,  #btn1:hover{
+    background-color: #1e293b;
+    color: #fff;
+  }
+  
+  @media (min-width: 768px) {
+    .button-81 {
+      font-size: 1.125rem;
+      padding: 1rem 2rem;
+    }
+  }
+  
+  .conditions {
+    visibility: hidden;
+    padding-top: 50px;
+    padding-right: 50px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
+  @media print {
+    .conditions {
+      visibility: visible;
+    }
+    img {
+      box-shadow: none;
+    }
+    .invoice-box {
+      top: 5px;
+      height: 90vh;
+      box-shadow: none;
+      border: 4px dotted gray;
+      margin: 10px;    
+      background-color: #fff;
+      overflow: hidden;
+    }
+    #one {
+      margin-right: -15px;
+    }
+    .date {
+      border: none;
+      text-align: right;
+      margin-right: -50px;
+    }
+    .info {
+      text-align: right;
+    }
+    .pass, i  {
+      visibility: hidden;
+    }
+    input {
+      border: none;
+    }
+    button, #btn1, .links{
+      display: none;
+    }
+    
+    @page {
+     margin: 0;
+  }
+  
+  }
+  
+  /*for theme dropdown*/
+  
+  #theme-button {
+    position: absolute;
+    z-index: 12;
+    right: 0;
+    top: 0;
+  }
+  
+  ul {
+    
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+  }
+  
+  li {
+    
+      
+    background: inherit;
+      display: block;
+      float: right;
+      padding: 0.4rem;
+      position: relative;
+      text-decoration: none;
+    transition-duration: 0.5s;
+  }
+    
+  li a {
+    color: black;
+    
+  }
+  
+  li:hover {
+      
+      cursor: pointer;
+  }
+  
+  ul li ul {
+      background: white;
+      visibility: hidden;
+    opacity: 0;
+    margin-top: 5px;
+      position: absolute;
+    transition: all 0.5s ease;
+    
+      left: 0;
+    display: none;
+  }
+  
+  ul li:hover > ul,
+  ul li ul:hover {
+    
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+  ul li ul li:hover {
+    background: gray;
+  }
+  ul li ul li {
+      clear: both;
+    width: 100%;
+  }
