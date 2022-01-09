@@ -1,45 +1,12 @@
 body {
-    background: linear-gradient(140.54deg, #608D00 0%, #D30000 72.37%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), radial-gradient(100% 164.72% at 100% 100%, #6100FF 0%, #00FF57 100%), radial-gradient(100% 148.07% at 0% 0%, #FFF500 0%, #51D500 100%);
-  background-blend-mode: color-dodge, overlay, difference, normal;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
+  background-color: #b3bcff;
     overflow-x: hidden;
   }  
   a {
     text-decoration: none;
   }
   
-  .winter {
-    background-image: url("https://images.unsplash.com/photo-1484603738253-e5b73679e8cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2128&q=80");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  .beach {
-    background-image: url("https://images.unsplash.com/photo-1476673160081-cf065607f449?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  .jungle {
-    background-image: url("https://images.unsplash.com/photo-1586094332115-680788e0182f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  .swamp {
-    background-image: url("https://images.unsplash.com/photo-1601477592675-333fade38e9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  .pyramids {
-    background-image: url("https://images.unsplash.com/photo-1570026517541-258404ea3bfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
+ 
   .nav {
     display: flex;
     justify-content: center;
@@ -49,22 +16,30 @@ body {
   }
   
   .invoice-box {
-    backdrop-filter: blur(16px) saturate(200%);
-      -webkit-backdrop-filter: blur(16px) saturate(200%);
-      background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
+   
     max-width: 800px;
     position: relative;
-    top: 2vh;
+    top: 1vh;
     margin: auto;
     padding: 30px;
-    border: 1px solid #eee;
-    box-shadow: 0 0 30px rgba(0, 0, 0, .85);
+    
     font-size: 16px;
     line-height: 24px;
     font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
     color: black;
     
+ 
+    border-radius: 30px;
+background: #8e95f5;
+box-shadow:  24px 24px 83px #696eb5,
+             -24px -24px 83px #b3bcff;
+    
+  }
+  .links {
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    right: 0;
   }
   .invoice-box i {
       margin-left: -26px;
@@ -168,13 +143,10 @@ body {
   .rtl table tr td:nth-child(2) {
     text-align: left;
   }
-  /*my formatting additions*/
-  img {
-    border: solid blue 2px;
-    background: gray;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .55);
-  }
+ 
+ .title h3 {
+     color:rgb(253, 253, 253);
+ }
   .date, .info {
     text-align: left;
     
