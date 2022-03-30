@@ -3,9 +3,9 @@
 <html>
 
     <head>
-        <title>Print Warranties For Your Computer Store</title>
+        <title>Print Invoices For Your Computer Store</title>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <meta name="description" content="Use this page to create warranty receipts for computers sold in your computer store">
+        <meta name="description" content="Use this page to create invoices for your computer store">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
@@ -27,13 +27,11 @@
     </div>
       </div>
 
-
-      <form class="invoice-box">
+      <div class="invoice-box">
         <table cellpadding="0" cellspacing="0">
           <tr class="top">
-            <td colspan="3">
+            <td colspan="4">
               <table>
-                
                 <tr>
                   <td class="title">
                     <h3>1 Year Warranty</h3>
@@ -44,16 +42,17 @@
                     <input type="date" class="date">
                   </td>
                 </tr>
+                
               </table>
             </td>
           </tr>
       
           <tr class="information">
-            <td colspan="3">
+            <td colspan="4">
               <table>
                 <tr>
                   <td>
-                    TVH Computers<br> 1421 Rt 209 STE #116<br> Brodheadsville, PA. 18322
+                    TVH Computers<br> 1421 Route 209 West End Plaza<br> Brodheadsville, PA. 18322 <br>570-801-7730
                   </td>
       
                   <td>
@@ -66,7 +65,7 @@
       
           
       
-          <tr class="heading" colspan="3">
+          <tr class="heading">
             <td>
               Description
             </td>
@@ -75,25 +74,29 @@
               Item Price
             </td>
       
-            
+            <td>
+              Quantity
+            </td>
       
             <td>
               Price
             </td>
           </tr>
       
-          <tr class="item" >
+          <tr class="item">
             <td>
               
-              <input value="Apple Macbook Pro" />
+              <input value="OS reinstallation" />
               
             </td>
       
             <td>
-              $<input type="number" value="649" />
+              $<input type="number" value="95" />
             </td>
       
-            
+            <td>
+              <input type="number" value="1" />
+            </td>
       
             <td>
               $00.00
@@ -105,14 +108,14 @@
           
       
           <tr>
-            <td colspan="3">
+            <td colspan="4">
               <button class="btn-add-row">Add row</button>
               <button class="btn-delete-row">Delete row</button>
             </td>
           </tr>
       
-          <tr class="total" colspan="3">
-            <td ></td>
+          <tr class="total">
+            <td colspan="2"></td>
       
             <td>
               Sub-total: 
@@ -124,7 +127,7 @@
           </tr>
           <tr class="tax">
             
-            <td></td>
+            <td colspan="2"></td>
       
              <td>
               Tax: 
@@ -135,7 +138,7 @@
             
           </tr>
           <tr class="totalwithtax">
-            <td></td>
+            <td colspan="2"></td>
       
             <td>
               Total: 
@@ -145,9 +148,14 @@
             </td>
             
           </tr>
+          
+          
+          
+          
         </table>
         
         <input type="button" id="btn1" value="Print" onClick="window.print()">
+       
         <input type="button" id="btn1" class="btn-add-sheet" value="Sheets" onClick="window.open('https://docs.google.com/spreadsheets/d/1DjB-B1tvkUmOKTyGs9WWPyEltGMSiATiOVB5tZ-dY24/edit#gid=1373503438')">
         <div class="conditions">
         <h4>Your warranty includes the following:</h4>
@@ -158,7 +166,11 @@
           
         </ul>
         </div>
-    </form>
+        
+      </div>
+
+
+    
 
     <script>
 
@@ -183,7 +195,7 @@ function calculateTotals() {
   const subtotals = $('.item').map((idx, val) => calculateSubtotal(val)).get();
   const total = subtotals.reduce((a, v) => a + Number(v), 0);
   $('.total td:eq(2)').text(formatAsCurrency(total));
-  //I think add sales tax right here
+  //add sales tax right here
   $('.tax td:eq(2)').text(formatAsCurrency(total * 0.06));
   $('.totalwithtax td:eq(2)').text(formatAsCurrency(total + (total * 0.06)));
 }
@@ -191,7 +203,7 @@ function calculateTotals() {
 function calculateSubtotal(row) {
   const $row = $(row);
   const inputs = $row.find('input');
-  const subtotal = inputs[1].value;
+  const subtotal = inputs[1].value * inputs[2].value;
 
   $row.find('td:last').text(formatAsCurrency(subtotal));
 
@@ -201,25 +213,7 @@ function calculateSubtotal(row) {
 function formatAsCurrency(amount) {
   return `$${Number(amount).toFixed(2)}`;
 }
-//toggle theme
-$("#theme").click(function(){
-$( "body" ).removeClass( "winter beach jungle swamp pyramids" )
-  });
-$("#theme1").click(function(){
-$( "body" ).removeClass( "beach jungle swamp pyramids" ).addClass( "winter")
-  });
-$("#theme2").click(function(){
-$( "body" ).removeClass( "winter jungle swamp pyramids" ).addClass( "beach" )
-  });
-$("#theme3").click(function(){
-$( "body" ).removeClass( "winter beach swamp pyramids" ).addClass( "jungle" )
-  });
-$("#theme4").click(function(){
-$( "body" ).removeClass( "winter beach jungle pyramids" ).addClass( "swamp" )
-  });
-$("#theme5").click(function(){
-$( "body" ).removeClass( "winter beach jungle swamp" ).addClass( "pyramids" )
-  });
+
 
   //make object
   $('.btn-add-sheet').on('click', () => {
